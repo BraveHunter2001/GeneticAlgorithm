@@ -22,6 +22,7 @@ namespace GeneticAlgorithm
 
                 _generation.Chromosomes.Add(new Chromosome(countGenes, true));
             }
+            _generation.Calc();
             Generations.Add(_generation);
             for (int i = 1; i < countEvolution + 1; i++)
             {
@@ -55,7 +56,7 @@ namespace GeneticAlgorithm
                 newChromosome.Add(new Chromosome(countGenes));
                 newChromosome[i].Genes[0] = strongestChromo.Genes[0];
                 
-                newChromosome[i].Genes[1].Value = rnd.Next(1, 100);
+                newChromosome[i].Genes[1].Value = rnd.Next(1, 1000);
                 newChromosome[i].Calc();
             }
 
@@ -64,7 +65,7 @@ namespace GeneticAlgorithm
                 newChromosome.Add(new Chromosome(countGenes));
                 newChromosome[i].Genes[1] = strongestChromo.Genes[1];
                
-                newChromosome[i].Genes[0].Value = rnd.Next(1, 100);
+                newChromosome[i].Genes[0].Value = rnd.Next(1, 1000);
                 newChromosome[i].Calc();
             }
 

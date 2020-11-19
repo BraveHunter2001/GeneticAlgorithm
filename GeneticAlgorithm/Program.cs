@@ -10,7 +10,7 @@ namespace GeneticAlgorithm
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             int countEvolv = 1000;
-            Evolution evolv = new Evolution(countEvolv, 4, 2);
+            Evolution evolv = new Evolution(countEvolv, 10, 2);
            // Console.WriteLine(evolv.ToString());
             //Console.WriteLine("Strongest: "+ evolv.StrongestGeneration.ToString());
             
@@ -36,6 +36,7 @@ namespace GeneticAlgorithm
                 }
             }
             Console.WriteLine("Done");
+            Console.WriteLine("Strongest: " + evolv.StrongestGeneration.ToString());
             Console.ReadLine();
             
         }

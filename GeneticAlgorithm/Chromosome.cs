@@ -34,7 +34,7 @@ namespace GeneticAlgorithm
             {
                 for (int i = 0; i < countGenes; i++)
                 {
-                    Genes.Add(new Gene(rnd.Next(1, 100)));
+                    Genes.Add(new Gene(rnd.Next(1, 1000)));
                 }
 
                 NumberGenes = Genes.Count;
